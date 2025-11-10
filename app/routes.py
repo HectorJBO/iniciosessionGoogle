@@ -5,4 +5,3 @@ from app import app
 def home():
     return render_template('inicio.html')
     
-    #def yaya
