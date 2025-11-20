@@ -3,8 +3,15 @@ from app import app
 from app.forms import Emailform, Passform
 from app.datos import agregar_usuario
 import random
+import os
 
 @app.route('/', methods=['POST', 'GET'])
+def index():
+    premios = os.listdir("static/premios")
+    premios = [f"/static/premios/{p}" for p in premios]
+    return render_template('index.html', premios = premios)
+
+@app.route('/iniciosession', methods=['POST', 'GET'])
 def home():
     formu = Emailform()
 
@@ -44,5 +51,7 @@ def contraseña():
 
 @app.route('/ruleta', methods=['POST'])
 def sorteo():
-    pass
+    premios = os.listdir("static/premios")
+    ganador = random.choice(premios)
 
+    return jsonify({"ganador": f"/static/premios/{ganador}"})

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Premios </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"> 
+
+    </head>
+    <body>
+        <h1>prueba tu suerte y gana grandiosos Premios</h1>
+
+        <button id="btn-girar">Gira la ruleta</button>
+        <div class = "ruleta" id = "ruleta"> </div>
+        <h2 id="titulo-ganador"></h2>
+        <img id="imagen-ganador" style="width:200px; display:none; margin-top:20px;">
+        <script src="{{url_for('static', filename='scripts/animation.js')}}"></script>
+    </body>
+</html>
