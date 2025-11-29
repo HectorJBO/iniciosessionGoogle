@@ -7,12 +7,34 @@
 
     </head>
     <body>
+        <img src="{{url_for('static', filename='images/elgallo-removebg-preview.png')}}" alt="elgallo" width="500" height="250">
         <h1>prueba tu suerte y gana grandiosos Premios</h1>
 
+        <div class="ruleta-container">
+        <div class="ruleta" id="ruleta"></div>
+        <div class="premios" id="premios"></div>
+        <div class="puntero"></div>
+        </div>
+
         <button id="btn-girar">Gira la ruleta</button>
-        <div class = "ruleta" id = "ruleta"> </div>
+
+        <script>
+         const premiosData = {{premios|tojson}};
+        </script>
+        <script src="{{url_for('static', filename='scripts/animation.js')}}"></script>
+
+
         <h2 id="titulo-ganador"></h2>
         <img id="imagen-ganador" style="width:200px; display:none; margin-top:20px;">
-        <script src="{{url_for('static', filename='scripts/animation.js')}}"></script>
+
+        <div id="modal-premio" class="modal">
+        <div class="modal-content">
+        <h2 id="modal-titulo"></h2>
+        <img id="modal-imagen" width="200">
+        <p> inicia session con Google para poder cangear tu premio en la sucursal mas cercana!!!</p>
+        <button id="aceptar-modal">aceptar</button>
+        </div>
+       </div>
+        
     </body>
 </html>
