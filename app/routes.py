@@ -23,7 +23,6 @@ def home():
 
     return render_template('inicio.html', formu=formu)
 
-@app.route('/info', methods=['GET'])
 def info():
     return """<script>
         ventana = window.open ("center", "Ventanagoogle", "width=400,height=300");
