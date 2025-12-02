@@ -62,9 +62,9 @@ document.getElementById("btn-girar").addEventListener("click", () => {
 
 });
 
-document.getElementById("aceptar-modal").addEventListener("click", () => {
-    document.getElementById("modal-premio").style.display = "none";
-
-    window.location.href = "/iniciosession";
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("aceptar-modal").addEventListener("click", () => {
+        document.getElementById("modal-premio").style.display = "none";
+        window.location.href = "/iniciosession";
+    });
 });
-

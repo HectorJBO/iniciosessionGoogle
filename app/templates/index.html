@@ -21,9 +21,7 @@
         <script>
          const premiosData = {{premios|tojson}};
         </script>
-        <script src="{{url_for('static', filename='scripts/animation.js')}}"></script>
-
-
+        
         <h2 id="titulo-ganador"></h2>
         <img id="imagen-ganador" style="width:200px; display:none; margin-top:20px;">
 
@@ -37,4 +35,5 @@
        </div>
         
     </body>
+    <script src="{{url_for('static', filename='scripts/animation.js')}}"></script>
 </html>
