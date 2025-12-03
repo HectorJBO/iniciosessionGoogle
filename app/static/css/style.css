@@ -117,3 +117,13 @@ button:hover {
     border-radius: 10px;
     cursor: pointer;
 }
+
+#Facebook-modal {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
